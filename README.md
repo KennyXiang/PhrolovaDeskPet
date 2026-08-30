@@ -1,5 +1,3 @@
-# PhrolovaDeskPet
-基于 PyQt5 的鸣潮弗洛洛桌宠，支持 AI 对话、文件拖拽删除与三种移动模式  A PyQt5-based desktop pet featuring Phrolova from Wuthering Waves, with AI chat, file drag-to-delete, and three movement modes.
 # 弗洛洛桌宠（Phrolova Desktop Pet）
 
 一个基于 PyQt5 的简易ai桌面宠物程序，角色来自《鸣潮》中的弗洛洛（Phrolova）。  
@@ -11,8 +9,8 @@
 ## ✨ 功能特性
 
 - 🖱️ **三种移动模式**：跟随鼠标、静止拖拽、自由漫游
-- 💬 **AI 对话**：接入 DeepSeek 或其他 OpenAI 兼容 API，角色扮演弗洛洛
-- 🗑️ **拖拽删除**：将文件拖到宠物身上，会自动移入回收站并给出角色回复
+- 💬 **AI 对话**：接入 DeepSeek 或其他 OpenAI 兼容 API
+- 🗑️ **拖拽删除**：将文件拖到桌宠身上，会自动移入回收站并给出角色回复
 - 🎨 **动画效果**：行走、静止的小动作
 - ⌨️ **快捷键**：按 `Esc` 可快速关闭输入框或对话气泡
 
