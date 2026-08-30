@@ -23,19 +23,13 @@
 - Python 3.8 或更高版本
 - macOS / Windows / Linux（推荐 macOS，已测试打包 .app）
 
-### 2. 克隆项目
-
-```bash
-git clone https://github.com/KennyXiang/PhrolovaDeskPet.git
-```
-
-### 3. 安装依赖
+### 2. 安装依赖
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. 配置 AI（可选）
+### 3. 配置 AI（可选）
 
 - 在 `ai_config.example.json` 中填写你的 `api_key` 和 `base_url`（默认使用 DeepSeek API），只兼容 OpenAI 接口协议
 
@@ -49,7 +43,7 @@ pip install -r requirements.txt
 
 - **注意**：如果不配置，AI 对话功能会提示“未配置”，但其他功能（移动、拖拽）依然可用。
 
-### 5. 运行
+### 4. 运行
 
 ```bash
 python Deskpet.py
