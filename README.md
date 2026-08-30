@@ -1,6 +1,6 @@
 # 弗洛洛桌宠（Phrolova Desktop Pet）
 
-一个基于 PyQt5 的简易ai桌面宠物程序，角色来自《鸣潮》中的弗洛洛（Phrolova）。  
+一个基于 PyQt5 的简易ai桌宠程序，角色来自《鸣潮》中弗洛洛（Phrolova）的同人二创糯糯。  
 支持三种移动模式、AI 对话、文件拖拽回收等功能。
 <img width="266" height="221" alt="Screenshot 2026-08-30 at 11 30 03 PM" src="https://github.com/user-attachments/assets/ffd4db47-218b-4473-be6d-488b6e802960" />
 
