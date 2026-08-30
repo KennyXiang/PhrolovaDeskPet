@@ -69,7 +69,6 @@ python Deskpet.py
 ## 🤝 贡献
 
 欢迎提交 Issue 或 Pull Request。 
-如果你有新的角色台词、功能建议，也非常欢迎！
 
 ---
 
