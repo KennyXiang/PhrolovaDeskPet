@@ -1,49 +1,99 @@
-# 弗洛洛桌宠（Phrolova Desktop Pet）
+# Phrolova Desktop Pet
 
-一个基于 PyQt5 的简易ai桌宠程序，角色来自《鸣潮》中弗洛洛（Phrolova）的同人二创糯糯。  
-支持三种移动模式、AI 对话、文件拖拽回收等功能。
-<img width="266" height="221" alt="Screenshot 2026-08-30 at 11 30 03 PM" src="https://github.com/user-attachments/assets/ffd4db47-218b-4473-be6d-488b6e802960" />
+A lightweight AI-powered desktop pet built with PyQt5, featuring a fan-made chibi version of Phrolova from *Wuthering Waves*.
 
----
+The app supports multiple movement modes, AI-powered conversations, drag-and-drop file deletion, simple animations, and other interactive features.
 
-## ✨ 功能特性
-
-- 🖱️ **三种移动模式**：跟随鼠标、静止拖拽、自由漫游
-- 💬 **AI 对话**：接入 DeepSeek 或其他 OpenAI 兼容 API
-- 🗑️ **拖拽删除**：将文件拖到桌宠身上，会自动移入回收站并给出角色回复
-- 🎨 **动画效果**：行走、静止的小动作
-- ⌨️ **快捷键**：按 `Esc` 可快速关闭输入框或对话气泡
+<img width="266" height="221" alt="Phrolova Desktop Pet Screenshot" src="https://github.com/user-attachments/assets/ffd4db47-218b-4473-be6d-488b6e802960" />
 
 ---
 
-## 📦 安装与运行
+## ✨ Features
 
-### 1. 环境要求
+- 🖱️ **Three Movement Modes**
+  - Follow the cursor
+  - Stay in place with drag support
+  - Freely wander around the screen
 
-- Python 3.8 或更高版本
-- macOS / Windows / Linux（推荐 macOS，已测试打包 .app）
+- 💬 **AI Chat**
+  - Supports DeepSeek and other OpenAI-compatible APIs
+  - Allows simple character-based conversations directly from the desktop
 
-### 2. 安装依赖
+- 🗑️ **Drag-and-Drop File Deletion**
+  - Drag a file onto the desktop pet
+  - The file will be moved to the system trash
+  - The character will respond after the action
+
+- 🎨 **Character Animations**
+  - Idle animation
+  - Walking animation
+  - Simple visual feedback for different states
+
+- ⌨️ **Keyboard Shortcuts**
+  - Press `Esc` to quickly close the chat input box or dialogue bubble
+
+---
+
+## 🎨 Design & Interaction
+
+This project is not only a programming experiment, but also an exploration of desktop interaction design.
+
+The desktop pet is designed to stay visible and interactive without taking over too much screen space. Its movement modes allow users to choose between a more active or less distracting experience depending on how they use their desktop.
+
+The interaction system includes:
+
+- Cursor-following behavior for active interaction
+- Free roaming for a more natural desktop companion experience
+- Manual dragging for direct position control
+- Drag-and-drop file interaction
+- Character responses after user actions
+- Lightweight dialogue bubbles designed to avoid blocking the desktop
+- Simple animation state changes between idle and movement
+
+The goal was to make the character feel responsive and playful while keeping the application lightweight and unobtrusive.
+
+---
+
+## 📦 Installation & Usage
+
+### 1. Requirements
+
+- Python 3.8 or later
+- macOS / Windows / Linux
+- macOS is recommended and has been tested with `.app` packaging
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/KennyXiang/PhrolovaDeskPet.git
+cd PhrolovaDeskPet
+```
+
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. 配置 AI（可选）
+### 4. Configure AI Features (Optional)
 
-- 在 `ai_config.example.json` 中填写你的 `api_key` 和 `base_url`（默认使用 DeepSeek API），只兼容 OpenAI 接口协议
+Edit or copy `ai_config.example.json` and provide your API configuration.
+
+The application supports APIs that follow the OpenAI-compatible interface format.
 
 ```json
 {
-    "api_key": "sk-你的真实密钥",
-    "base_url": "https://api.deepseek.com",
-    "model": "deepseek-v4-flash"
+  "api_key": "sk-your-api-key",
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash"
 }
 ```
 
-- **注意**：如果不配置，AI 对话功能会提示“未配置”，但其他功能（移动、拖拽）依然可用。
+> **Important:** Do not upload your real API key to GitHub. Keep personal configuration files containing API keys out of version control.
 
-### 4. 运行
+If AI configuration is not provided, the chat feature will display a configuration warning. Other features such as movement, dragging, file deletion, and animations will continue to work normally.
+
+### 5. Run the Application
 
 ```bash
 python Deskpet.py
@@ -51,27 +101,152 @@ python Deskpet.py
 
 ---
 
-## 🗂️ 项目结构
+## 🕹️ Movement Modes
 
+### Cursor Follow
+
+The character follows the user's mouse cursor around the screen, creating a more active and responsive interaction.
+
+### Static / Manual Dragging
+
+The character stays in place unless manually dragged by the user. This mode is useful when users want the pet to remain visible without constantly moving around the screen.
+
+### Free Roaming
+
+The character moves around the desktop automatically, creating the feeling of an independent desktop companion.
+
+---
+
+## 💬 AI Chat
+
+The desktop pet can connect to an OpenAI-compatible API and generate character dialogue.
+
+Currently supported configurations include:
+
+- DeepSeek
+- Other services using an OpenAI-compatible API format
+
+AI functionality is optional and does not affect the core desktop pet features.
+
+---
+
+## 🗑️ Drag-and-Drop File Deletion
+
+Files can be dragged directly onto the desktop pet.
+
+When a supported file is dropped onto the character:
+
+1. The application detects the dropped file
+2. The file is moved to the system trash
+3. The character displays a response
+
+For safety, files are moved to the system trash rather than being permanently deleted.
+
+---
+
+## 🎨 Animation
+
+The desktop pet uses multiple image states to create simple character animations.
+
+Current states include:
+
+- Idle
+- Walking
+- Movement transitions
+
+Example assets:
+
+```text
+images/
+├── fll_still.png
+├── fll_run_1.png
+└── fll_run_2.png
 ```
-├── Deskpet.py          # 主程序
-├── images/                   # 图片资源
+
+Additional animation states can be added by extending the existing image and animation logic.
+
+---
+
+## ⌨️ Controls
+
+| Action | Control |
+|---|---|
+| Move the character manually | Click and drag |
+| Close chat input | `Esc` |
+| Close dialogue bubble | `Esc` |
+| Delete a file | Drag the file onto the desktop pet |
+
+---
+
+## 🗂️ Project Structure
+
+```text
+├── Deskpet.py                 # Main application
+├── images/                    # Character image assets
 │   ├── fll_still.png
 │   ├── fll_run_1.png
 │   └── fll_run_2.png
-├── ai_config.example.json    # AI 配置模板
-├── requirements.txt          # 依赖列表
-└── README.md                # 本文件
+├── ai_config.example.json     # AI configuration template
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
 ```
 
 ---
 
-## 🤝 贡献
+## 🔐 API Key Safety
 
-欢迎提交 Issue 或 Pull Request。 
+Never store a real API key directly in a public GitHub repository.
+
+It is recommended to keep your real configuration in a separate local file such as:
+
+```text
+ai_config.json
+```
+
+and add it to `.gitignore`.
+
+Example:
+
+```gitignore
+ai_config.json
+.env
+__pycache__/
+*.pyc
+.DS_Store
+```
+
+Only `ai_config.example.json` should be included in the public repository.
 
 ---
 
-## 📄 许可证
+## 🚧 Possible Future Improvements
 
-本项目仅供学习交流使用，请勿用于商业用途。  
+- More character animations
+- More interaction states
+- Additional dialogue expressions
+- Customizable movement behavior
+- Multiple character support
+- Improved settings interface
+- Better cross-platform compatibility
+- Local AI model support
+- Additional drag-and-drop interactions
+
+---
+
+## 🤝 Contributing
+
+Issues and pull requests are welcome.
+
+Feel free to report bugs, suggest features, or propose improvements.
+
+---
+
+## 📄 License & Disclaimer
+
+This project is intended for learning, personal experimentation, and non-commercial use only.
+
+Phrolova and *Wuthering Waves* are the property of their respective copyright holders.
+
+This project is an unofficial fan-made work and is not affiliated with, sponsored by, or endorsed by Kuro Games.
+
+All character-related artwork and intellectual property remain the property of their respective owners.
