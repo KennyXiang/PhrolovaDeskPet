@@ -8,7 +8,9 @@ The app supports multiple movement modes, AI-powered conversations, drag-and-dro
 
 
 
-https://github.com/user-attachments/assets/2d811a71-4748-488c-b715-05480b3733c1
+https://github.com/user-attachments/assets/dba54fbb-6963-429e-b586-1431db7a724f
+
+
 
 
 ---
