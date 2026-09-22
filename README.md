@@ -1,15 +1,3 @@
-
-
-https://github.com/user-attachments/assets/f440f466-2f50-4b51-9aed-c350ce87db13
-
-
-
-https://github.com/user-attachments/assets/54c134bd-1432-4a70-b1bd-229def98a641
-
-
-
-https://github.com/user-attachments/assets/170f7985-400c-4a2f-8baa-054302e6c67f
-
 # Phrolova Desktop Pet
 
 A lightweight AI-powered desktop pet built with PyQt5, featuring a fan-made chibi version of Phrolova from *Wuthering Waves*.
@@ -18,6 +6,7 @@ The app supports multiple movement modes, AI-powered conversations, drag-and-dro
 
 <img width="266" height="221" alt="Phrolova Desktop Pet Screenshot" src="https://github.com/user-attachments/assets/ffd4db47-218b-4473-be6d-488b6e802960" />
 
+https://github.com/user-attachments/assets/170f7985-400c-4a2f-8baa-054302e6c67f
 ---
 
 ## ✨ Features
